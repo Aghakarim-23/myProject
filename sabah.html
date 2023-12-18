@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>welcome</title>
+   
   </head>
   <body >
     <img src="img/Ellipse 1.svg" alt="big-circle" class="absolute right-0">
@@ -19,16 +20,17 @@
                 <div>
                     <img src="img/SABAH (1).svg" alt="sabahLogo" class="mb-[20px]">
                 </div>
-                <form action="#" class="shadow-md bg-[#FCFCFC] p-[32px] rounded-[8px]">
-                    <div>
-                        <label for="name" class="block text-left  text-[16px] text-[#686868] font-semibold mt-[8px]">First name*</label>
-                        <input type="text" name="name" id="name" placeholder="Enter your first name" class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border" >
-                    </div>
-                    <div>
-                        <label for="lastName" class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]" >Last name *</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border" >
-                    </div>
-
+                <form action="#" class="shadow-md bg-[#FCFCFC] p-[32px] rounded-[8px] w-[485px] h-[152px]">
+                  <label for="category" class="block text-left mb-[8px] " >Category</label>
+                 <div class="h-[56px] w-full relative hover:cursor-pointer focus:outline-none border rounded-[10px] overflow-hidden">
+                  <select name="category" id="category" class="w-full hover:cursor-pointer focus:outline-none h-full appearance-none px-4 ">
+                    <option value="" disabled selected>Choose a category</option>
+                    <option value="1">Interview</option>
+                    <option value="2">Event</option>
+                    <option value="3">Session / Meeting</option>
+                  </select>
+                  <img class="absolute w-4 h-4 right-4 top-5 pointer-events-none" src="./img/chevronDown.svg" alt="">
+                 </div>
                 </form>
 
               
@@ -37,6 +39,19 @@
         </div>
        
     </div>
-   <script src="script.js"></script>
+   <script>
+    // burda deyirəm ki, əgər ana səhifədəyəmsə məni ünvanladığım səhifəyə apar əgər ünvanladığım səhifədəyəmsə heçnə etmə
+
+if (window.location.pathname === "/index.html") {
+  document.body.addEventListener("click", function () {
+    window.location.href = "secondPage.html";
+  });
+}
+
+function navigateToPage(page) {
+  window.location.href = page;
+}
+
+   </script>
   </body>
 </html>
