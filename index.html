@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+      // burda deyirəm ki, əgər ana səhifədəyəmsə məni ünvanladığım səhifəyə apar əgər ünvanladığım səhifədəyəmsə heçnə etmə
+
+      if (window.location.pathname === "/index.html") {
+        document.body.addEventListener("click", function () {
+          window.location.href = "secondPage.html";
+        });
+      }
+
+      function navigateToPage(page) {
+        window.location.href = page;
+      }
+
+      window.addEventListener("click", () => {
+        console.log("clicked");
+      });
+    </script>
     <title>welcome</title>
   </head>
   <body>
@@ -35,19 +52,5 @@
       <h1 class="text-[66px] font-semibold">Welcome</h1>
       <p class="text-[40px] mt-[-12px]">Click to start</p>
     </div>
-
-    <script>
-      // burda deyirəm ki, əgər ana səhifədəyəmsə məni ünvanladığım səhifəyə apar əgər ünvanladığım səhifədəyəmsə heçnə etmə
-
-      if (window.location.pathname === "/index.html") {
-        document.body.addEventListener("click", function () {
-          window.location.href = "secondPage.html";
-        });
-      }
-
-      function navigateToPage(page) {
-        window.location.href = page;
-      }
-    </script>
   </body>
 </html>
