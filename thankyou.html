@@ -30,27 +30,10 @@
     />
 
     <div
-      class="flex flex-col items-center `justify-center text-[#432163] text-center h-screen"
+      class="flex flex-col items-center justify-center text-[#432163] text-center h-screen"
     >
-      <h1 class="text-[66px] font-semibold">Welcome</h1>
-      <p class="text-[40px] mt-[-12px]">Click to start</p>
+    <img src="img/check mark.svg" alt="thankYou">
+      <h1 class="text-[66px] font-semibold">Thank you</h1>
     </div>
-    <script >
-      // burda deyirəm ki, əgər ana səhifədəyəmsə məni ünvanladığım səhifəyə apar əgər ünvanladığım səhifədəyəmsə heçnə etmə
-
-      if (window.location.pathname === "/index.html") {
-        document.body.addEventListener("click", function () {
-          window.location.href = "secondPage.html";
-        });
-      }
-
-      function navigateToPage(page) {
-        window.location.href = page;
-      }
-
-      window.addEventListener("click", () => {
-        console.log("clicked");
-      });
-    </script>
   </body>
 </html>

@@ -5,53 +5,259 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>welcome</title>
-   
   </head>
-  <body >
-    <img src="img/Ellipse 1.svg" alt="big-circle" class="absolute right-0">
-    <img src="img/Ellipse 4.svg" alt="middle-circle" class="absolute bottom-0">
-    <img src="img/Ellipse 3.svg" alt="small-sircle-1" class="absolute top-[151px] left-[8px]">
-    <img src="img/Ellipse 4 (1).svg" alt="small-circle-2" class="absolute right-0 bottom-[173px]">
-    <img src="img/Ellipse 5.svg" alt="small-circle1" class="absolute bottom-[446px] left-[205px]">
-    <img src="img/Ellipse 5.svg" alt="small-circle2" class="absolute bottom-[133px] right-[311px]">
-   
-        <div class="flex items-center justify-center h-screen w-[100%] ">
-            <div class="flex flex-col  justify-center items-center text-center w-[503px] h-[332px]   ">
-                <div>
-                    <img src="img/SABAH (1).svg" alt="sabahLogo" class="mb-[20px]">
-                </div>
-                <form action="#" class="shadow-md bg-[#FCFCFC] p-[32px] rounded-[8px] w-[485px] h-[152px]">
-                  <label for="category" class="block text-left mb-[8px] " >Category</label>
-                 <div class="h-[56px] w-full relative hover:cursor-pointer focus:outline-none border rounded-[10px] overflow-hidden">
-                  <select name="category" id="category" class="w-full hover:cursor-pointer focus:outline-none h-full appearance-none px-4 ">
-                    <option value="" disabled selected>Choose a category</option>
-                    <option value="1">Interview</option>
-                    <option value="2">Event</option>
-                    <option value="3">Session / Meeting</option>
-                  </select>
-                  <img class="absolute w-4 h-4 right-4 top-5 pointer-events-none" src="./img/chevronDown.svg" alt="">
-                 </div>
-                </form>
+  <body>
+    <img src="img/Ellipse 1.svg" alt="big-circle" class="absolute right-0" />
+    <img
+      src="img/Ellipse 4.svg"
+      alt="middle-circle"
+      class="absolute bottom-0"
+    />
+    <img
+      src="img/Ellipse 3.svg"
+      alt="small-sircle-1"
+      class="absolute top-[151px] left-[8px]"
+    />
+    <img
+      src="img/Ellipse 4 (1).svg"
+      alt="small-circle-2"
+      class="absolute right-0 bottom-[173px]"
+    />
+    <img
+      src="img/Ellipse 5.svg"
+      alt="small-circle1"
+      class="absolute bottom-[446px] left-[205px]"
+    />
+    <img
+      src="img/Ellipse 5.svg"
+      alt="small-circle2"
+      class="absolute bottom-[133px] right-[311px]"
+    />
 
-              
-                
-                </div>
+    <div class="flex items-center justify-center h-screen w-[100%]">
+      <div
+        class="flex flex-col justify-center items-center text-center w-[503px] h-[332px]"
+      >
+        <div>
+          <img src="img/SABAH (1).svg" alt="sabahLogo" class="mb-[20px]" />
         </div>
-       
+        <form
+          action="#"
+          class="shadow-md bg-[#FCFCFC] p-[32px] rounded-[8px] w-[485px]"
+          id="form"
+        >
+          <label for="category" class="block text-left mb-[8px]"
+            >Category</label
+          >
+          <div
+            class="h-[56px] w-full relative hover:cursor-pointer focus:outline-none border rounded-[10px] overflow-hidden"
+          >
+            <select
+              name="category"
+              id="category"
+              class="w-full hover:cursor-pointer focus:outline-none h-full appearance-none px-4"
+            >
+              <option value="" disabled selected class="text-red-900">
+                Choose a category
+              </option>
+              <option value="Interview">Interview</option>
+              <option value="Event">Event</option>
+              <option value="Session / Meeting">Session / Meeting</option>
+            </select>
+            <img
+              class="absolute w-4 h-4 right-4 top-5 pointer-events-none"
+              src="./img/chevronDown.svg"
+              alt=""
+            />
+          </div>
+          <div id="addHere"></div>
+        </form>
+      </div>
     </div>
-   <script>
-    // burda deyirəm ki, əgər ana səhifədəyəmsə məni ünvanladığım səhifəyə apar əgər ünvanladığım səhifədəyəmsə heçnə etmə
 
-if (window.location.pathname === "/index.html") {
-  document.body.addEventListener("click", function () {
-    window.location.href = "secondPage.html";
-  });
-}
+    <script>
+      const obj = [
+        {
+          title: "Interview",
+          body: ` <div>
+            <div>
+              <label
+                for="name"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >First name*</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your first name"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+            <div>
+              <label
+                for="lastName"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >Last name *</label
+              >
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Enter your last name"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
 
-function navigateToPage(page) {
-  window.location.href = page;
-}
+          </div>`,
+        },
+        {
+          title: "Event",
+          body: `<div>
+            <div>
+              <label
+                for="name"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >First name*</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your first name"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+            <div>
+              <label
+                for="lastName"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >Last name *</label
+              >
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Enter your last name"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+            <div>
+              <label
+                for="eMail"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >Email *</label
+              >
+              <input
+                type="email"
+                name="eMail"
+                id="eMail"
+                placeholder="Enter your email"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+          </div>`
+        },
+        {
+          title: "Session / Meeting",
+          body: `<div>
+            <div>
+              <label
+                for="name"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >First name*</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your first name"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+            <div>
+              <label
+                for="lastName"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >Last name *</label
+              >
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Enter your last name"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+            <div>
+              <label
+                for="eMail"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >Email *</label
+              >
+              <input
+                type="email"
+                name="eMail"
+                id="eMail"
+                placeholder="Enter your email"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+            <div>
+              <label
+                for="yourTeam"
+                class="block text-left text-[16px] text-[#686868] font-semibold mt-[8px]"
+                >Your team</label
+              >
+              <input
+                type="text"
+                name="yourTeam"
+                id="yourTeam"
+                placeholder="Enter your team"
+                class="w-[421px] h-[56px] py-4 px-5 rounded-[8px] border"
+              />
+            </div>
+          </div>`
+        }
 
-   </script>
+      ];
+
+      // Get the category dropdown and input fields
+      const categoryDropdown = document.getElementById("category");
+      const firstNameInput = document.getElementById("name");
+      const lastNameInput = document.getElementById("lastName");
+      const emailInput = document.getElementById("eMail");
+      const teamInput = document.getElementById("yourTeam");
+      const addHere = document.getElementById("addHere");
+
+      // burda deyirəm ki, əgər ana səhifədəyəmsə məni ünvanladığım səhifəyə apar əgər ünvanladığım səhifədəyəmsə heçnə etmə
+
+      if (window.location.pathname === "/index.html") {
+        document.body.addEventListener("click", function () {
+          window.location.href = "secondPage.html";
+        });
+      }
+
+      function navigateToPage(page) {
+        window.location.href = page;
+      }
+
+      // Add change event listener to the category dropdown
+      categoryDropdown.addEventListener("change", function (e) {
+        const selectedCategory = categoryDropdown.value;
+
+        const selectedItem = obj.filter(
+          (item) => item.title === e.target.value
+        );
+
+        console.log(selectedItem);
+
+        if (selectedItem) {
+          addHere.innerHTML = selectedItem[0].body;
+        }
+      });
+
+      // Rest of your code...
+    </script>
   </body>
 </html>
