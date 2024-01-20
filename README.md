@@ -1,4 +1,4 @@
 # Registery site
 
-[Demo link: https://registery-site.netlify.app
+[Demo link: https://registery-sabah.netlify.app
 )
